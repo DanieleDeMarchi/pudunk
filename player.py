@@ -12,13 +12,13 @@ class Player:
         self.draft_ranks_by_rank_type = player_data["player"]["draftRanksByRankType"]
         self.first_name = player_data["player"]["firstName"]
         self.full_name = player_data["player"]["fullName"]
-        self.injured = player_data["player"]["injured"]
-        self.injury_status = player_data["player"]["injuryStatus"]
-        self.jersey = player_data["player"]["jersey"]
-        self.last_news_date = player_data["player"]["lastNewsDate"]
+        #self.injured = player_data["player"]["injured"]
+        #self.injury_status = player_data["player"]["injuryStatus"]
+        #self.jersey = player_data["player"]["jersey"]
+        #self.last_news_date = player_data["player"]["lastNewsDate"]
         self.pro_team_id = player_data["player"]["proTeamId"]
         self.team = next((t for t in teams if t.id == self.pro_team_id), None)
-        self.season_outlook = player_data["player"]["seasonOutlook"]
+        #self.season_outlook = player_data["player"]["seasonOutlook"]
         #self.ratings = player_data["ratings"]
         if(player_data["player"]["stats"][0].get('averageStats') is not None):
             self.last_year_stats = PlayerStats(player_data["player"]["stats"][0]['averageStats'])
